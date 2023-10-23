@@ -17,6 +17,7 @@ import javax.swing.JOptionPane;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
+import javax.swing.UIManager;
 
 public class Problema_8_1 extends JFrame implements ActionListener {
 
@@ -41,6 +42,7 @@ public class Problema_8_1 extends JFrame implements ActionListener {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
+					UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 					Problema_8_1 frame = new Problema_8_1();
 					frame.setVisible(true);
 				}
@@ -63,7 +65,7 @@ public class Problema_8_1 extends JFrame implements ActionListener {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		lblNumero = new JLabel("Número");
+		lblNumero = new JLabel("Nï¿½mero");
 		lblNumero.setBounds(10, 11, 50, 23);
 		contentPane.add(lblNumero);
 
@@ -78,27 +80,27 @@ public class Problema_8_1 extends JFrame implements ActionListener {
 		btnAdicionar.setBounds(380, 48, 195, 23);
 		contentPane.add(btnAdicionar);
 
-		btnEliminarPares = new JButton("Eliminar números pares");
+		btnEliminarPares = new JButton("Eliminar nï¿½meros pares");
 		btnEliminarPares.addActionListener(this);
 		btnEliminarPares.setBounds(380, 78, 195, 23);
 		contentPane.add(btnEliminarPares);
 		
-		btnEliminarImpares = new JButton("Eliminar números impares");
+		btnEliminarImpares = new JButton("Eliminar nï¿½meros impares");
 		btnEliminarImpares.addActionListener(this);
 		btnEliminarImpares.setBounds(380, 108, 195, 23);
 		contentPane.add(btnEliminarImpares);
 		
-		btnEliminarRepetidos = new JButton("Eliminar números repetidos");
+		btnEliminarRepetidos = new JButton("Eliminar nï¿½meros repetidos");
 		btnEliminarRepetidos.addActionListener(this);
 		btnEliminarRepetidos.setBounds(380, 138, 195, 23);
 		contentPane.add(btnEliminarRepetidos);
 
-		btnPrimerParAlFinal = new JButton("Primer número par al final");
+		btnPrimerParAlFinal = new JButton("Primer nï¿½mero par al final");
 		btnPrimerParAlFinal.addActionListener(this);
 		btnPrimerParAlFinal.setBounds(380, 168, 195, 23);
 		contentPane.add(btnPrimerParAlFinal);
 
-		btnBarajar = new JButton("Barajar los números");
+		btnBarajar = new JButton("Barajar los nï¿½meros");
 		btnBarajar.addActionListener(this);
 		btnBarajar.setBounds(380, 198, 195, 23);
 		contentPane.add(btnBarajar);
@@ -112,7 +114,7 @@ public class Problema_8_1 extends JFrame implements ActionListener {
 		scrollPane.setViewportView(txtS);
 	}
 		
-	//  Declaración global
+	//  Declaraciï¿½n global
 	Arreglo a = new Arreglo();
 
 	public void actionPerformed(ActionEvent arg0) {
@@ -137,7 +139,7 @@ public class Problema_8_1 extends JFrame implements ActionListener {
 		limpieza();
 	}
 	/**
-	 *  Adiciona un número en el arreglo
+	 *  Adiciona un nï¿½mero en el arreglo
 	 */	
 	protected void actionPerformedBtnAdicionar(ActionEvent arg0) {
 		try {
@@ -173,7 +175,7 @@ public class Problema_8_1 extends JFrame implements ActionListener {
 		a.barajarNumeros();
 		listar();
 	}
-	//  Métodos tipo void (sin parámetros)
+	//  Mï¿½todos tipo void (sin parï¿½metros)
 	void imprimir() {
 		imprimir("");
 	}
@@ -186,14 +188,14 @@ public class Problema_8_1 extends JFrame implements ActionListener {
 		for (int i=0; i<a.tamanio(); i++)
 			imprimir("n[" + i + "] : " + a.obtener(i));
 	}
-	//  Métodos tipo void (con parámetros)
+	//  Mï¿½todos tipo void (con parï¿½metros)
 	void imprimir(String s) {
 		txtS.append(s + "\n");
 	}
 	void mensaje(String s) {
 		JOptionPane.showMessageDialog(this, s);
 	}
-	//  Métodos que retornan valor (sin parámetros)
+	//  Mï¿½todos que retornan valor (sin parï¿½metros)
 	int leerNumero()  {
 		return Integer.parseInt(txtNumero.getText().trim());
 	}
